@@ -13,6 +13,8 @@
 		61A34924297451A5008059FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A34922297451A5008059FE /* Main.storyboard */; };
 		61A34926297451A6008059FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A34925297451A6008059FE /* Assets.xcassets */; };
 		61A34929297451A6008059FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A34927297451A6008059FE /* LaunchScreen.storyboard */; };
+		61A34932297452CC008059FE /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 61A34931297452CC008059FE /* OpenAISwift */; };
+		61A3493429745320008059FE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3493329745320008059FE /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		61A34925297451A6008059FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61A34928297451A6008059FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61A3492A297451A6008059FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61A3493329745320008059FE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A34932297452CC008059FE /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				61A3491C297451A5008059FE /* AppDelegate.swift */,
 				61A3491E297451A5008059FE /* SceneDelegate.swift */,
 				61A34920297451A5008059FE /* ViewController.swift */,
+				61A3493329745320008059FE /* APICaller.swift */,
 				61A34922297451A5008059FE /* Main.storyboard */,
 				61A34925297451A6008059FE /* Assets.xcassets */,
 				61A34927297451A6008059FE /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = ChatAI;
+			packageProductDependencies = (
+				61A34931297452CC008059FE /* OpenAISwift */,
+			);
 			productName = ChatAI;
 			productReference = 61A34919297451A5008059FE /* ChatAI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 61A34910297451A5008059FE;
+			packageReferences = (
+				61A34930297452CC008059FE /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 61A3491A297451A5008059FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A3493429745320008059FE /* APICaller.swift in Sources */,
 				61A34921297451A5008059FE /* ViewController.swift in Sources */,
 				61A3491D297451A5008059FE /* AppDelegate.swift in Sources */,
 				61A3491F297451A5008059FE /* SceneDelegate.swift in Sources */,
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		61A34930297452CC008059FE /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		61A34931297452CC008059FE /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61A34930297452CC008059FE /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61A34911297451A5008059FE /* Project object */;
 }
